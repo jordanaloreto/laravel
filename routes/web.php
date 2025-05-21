@@ -12,7 +12,7 @@ Route::get('/login', [\App\Http\Controllers\ContatoController::class, 'login'])-
 
 Route::prefix('/app')->group(function() {
     Route::get('/clientes', [\App\Http\Controllers\ContatoController::class, 'clientes'])->name('app.clientes');
-    Route::get('/fornecedores', [\App\Http\Controllers\ContatoController::class, 'fornecedores'])->name('app.fornecedores');
+    Route::get('/fornecedores', [\App\Http\Controllers\FornecedorController::class, 'index'])->name('app.fornecedores');
     Route::get('/produtos', [\App\Http\Controllers\ContatoController::class, 'produtos'])->name('app.produtos');
 });
 
